@@ -18,6 +18,7 @@ public class Chat {
 	
 	public void addUser(User user) {
 		this.users.add(user);
+		System.out.println("User "+ user.getName() +" added.");
 	}
 	
 	public void addMessage(User user, String message) {
@@ -31,4 +32,7 @@ public class Chat {
 		System.out.println(user.getName() + ": " + this.chat.get(this.chat.size() - 1) + System.lineSeparator());
 	}
 
+	public List<User> getUsers(){
+		return this.users;
+	}
 }

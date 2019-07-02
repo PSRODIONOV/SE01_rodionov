@@ -30,8 +30,8 @@ public class ChatServer {
 				
 				System.out.println("Got a connection from " + client.getInetAddress());
 				
-				User user = new User("user_" + i++, client.getInputStream());
-				
+				User user = new User("user_" + i++, client.getInputStream(), client.getOutputStream());
+
 				Thread thread = new Thread(user);
 				thread.start();
 				
